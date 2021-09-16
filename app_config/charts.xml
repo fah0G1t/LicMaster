@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<inchart>
+  <charts>
+    <chart name="desktop_licenses" title="notitle">
+      <head_info>
+        <query>
+          SELECT dsk_lc.*, clt.nome_cliente,clt.telefono,clt.email, prd.nome FROM desktop_licenses dsk_lc
+          INNER JOIN clienti clt ON dsk_lc.id_cliente = clt.id_client
+          INNER JOIN Prodotti prd ON dsk_lc.id_prodotto = prd.id_prodotto
+        </query>
+        <order></order>
+        <key>idimb</key>
+        <main_table>desktop_licenses</main_table>
+        <connectionDevelop>Data Source=ROADRUNNER; Initial Catalog=ingenio_license_ctrl; User id=sa; Password=burning;</connectionDevelop>
+        <connection>Data Source=HSCCWS2012STD; Initial Catalog=ingenio_license_ctrl; User id=sa; Password=@1xPVLNxKyWsfasQw2!;</connection>
+        <search_stats>
+          <search_stats_immo>
+            <field field_link="idtipo" field_info="nome_tipo" label="Tipologia" field_type="string">tipo</field>
+            <field field_link="idarea" field_info="Loc" label="Zona" field_type="string">area</field>
+            <field field_link="idarea" field_info="Loc" label="Citta" field_type="string">idcitta</field>
+          </search_stats_immo>
+        </search_stats>
+        <graphic_info>
+          <base_row_css>admin_base_row</base_row_css>
+          <alter_row_css>admin_alter_row</alter_row_css>
+        </graphic_info>
+      </head_info>
+      <!-- 
+      <column>
+        <header>
+          <visible>0</visible>
+          <dbname>id_licenza</dbname>
+          <css_heading_col>price_header</css_heading_col>
+          <bck_color></bck_color>
+          <control format="{0}"  caption="">none</control>
+        </header>
+        <data>
+          <dbname>id_licenza</dbname>
+          <control format="{0}">none</control>
+          <bck_color></bck_color>
+          <css_data_cell>scheda_view</css_data_cell>
+        </data>
+      </column>
+      -->
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>nome_cliente</dbname>
+          <control format="{0}" caption="text:Cliente">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>nome_cliente</dbname>
+          <control format="{0}" caption="dbfield:nome_cliente">none</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>nome</dbname>
+          <control format="{0}" caption="text:Prodotto">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>nome</dbname>
+          <control format="{0}" caption="dbfield:nome">none</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>vsn</dbname>
+          <control format="{0}" caption="text:Vol. serial number">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>vsn</dbname>
+          <control format="{0}" caption="dbfield:vsn">none</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>c_name</dbname>
+          <control format="{0}" caption="text:Computer">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>c_name</dbname>
+          <bck_color></bck_color>
+          <control format="{0}" caption="dbfield:c_name">none</control>
+          <bck_color></bck_color>
+          <css_data_cell>mylogtable</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>dcount</dbname>
+          <control format="{0}" caption="text:Tipo di licenza">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>dcount</dbname>
+          <bck_color></bck_color>
+          <control format="giorni {0}" caption="dbfieldset:dcount°(0=text:Illimitata|#=dbfield:dcount)">none"</control>
+          <bck_color></bck_color>
+          <css_data_cell>mylogtable</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>os</dbname>
+          <control format="{0}" caption="text:S.Operativo">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>os</dbname>
+          <bck_color></bck_color>
+          <control format="{0}" caption="dbfield:os">none</control>
+          <bck_color></bck_color>
+          <css_data_cell>mylogtable</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>clnt_app_dir</dbname>
+          <control format="{0}" caption="text:App folder">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>clnt_app_dir</dbname>
+          <bck_color></bck_color>
+          <control format="{0}" caption="dbfield:clnt_app_dir">none</control>
+          <bck_color></bck_color>
+          <css_data_cell>mylogtable</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>id_licenza</dbname>
+          <control css_cell="row_header" format="{0}" caption="text:Invia lic. per email">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>id_licenza</dbname>
+          <control css="chart_link" format="e-mail a {0}" caption="dbfield:nome_cliente" href="ManagControlloPresenze.aspx?idlic={0}"  onClickParams="dbfield:id_licenza">link</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>id_licenza</dbname>
+          <control format="{0}" caption="text:Scarica licenza">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>id_licenza</dbname>
+          <control css="chart_link" format="{0}" caption="text:scarica" href="ManagControlloPresenze.aspx?idlic_dwnld={0}"  onClickParams="dbfield:id_licenza">link</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>id_licenza</dbname>
+          <control format="{0}" caption="text:Cancella">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>id_licenza</dbname>
+          <control css="chart_link" format="{0}" caption="text:cancella" href="ManagControlloPresenze.aspx?idlic_delete={0}"  onClickParams="dbfield:id_licenza">link</control>
+          <css_data_cell>FRAME_CONTENT</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>id_licenza</dbname>
+          <control format="{0}" caption="text:Edita nell form">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>id_licenza</dbname>
+          <control css="chart_link" format="{0}" caption="text:edita" href="ManagControlloPresenze.aspx?idlic_cpy={0}"  onClickParams="dbfield:id_licenza">link</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>data_req</dbname>
+          <control format="{0}" caption="text:Richiesta">none</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>data_req</dbname>
+          <bck_color></bck_color>
+          <control format="{0}" caption="dbfield:data_req">none</control>
+          <bck_color></bck_color>
+          <css_data_cell>mylogtable</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>data_send</dbname>
+          <control format="{0}" caption="text:Inviata">label</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>data_send</dbname>
+          <control format="{0}" caption="dbfield:data_send">label</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>nota</dbname>
+          <control format="{0}" caption="text:Nota">label</control>
+          <css_cell apply_only_ifowner="1">chart_heading</css_cell>
+        </header>
+        <data>
+          <dbname>nota</dbname>
+          <control format="{0}" caption="dbfield:nota">label</control>
+          <css_data_cell>mylogtable</css_data_cell>
+          <bck_color></bck_color>
+        </data>
+      </column>
+
+      <!-- 
+      <column>
+        <header>
+          <dbname>m2</dbname>
+          <control format="{0}" caption="text:Superficie">none</control>
+          <bck_color></bck_color>
+          <css_heading_col apply_only_ifowner="1">prices_header</css_heading_col>
+        </header>
+        <data>
+          <dbname>m2</dbname>
+          <control format="{0}" caption="dbfield:m2">label</control>
+          <bck_color></bck_color>
+          <css_data_cell>scheda_view</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>Loc</dbname>
+          <control format="{0}" caption="text:Località">none</control>
+          <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        </header>
+        <data>
+          <dbname>Loc</dbname>
+          <control format="{0}({1})" caption="dbfield:nomecitta;dbfield:nomearea">label</control>
+          <bck_color></bck_color>
+          <css_data_cell>scheda_view</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>invendita</dbname>
+          <control format="{0}" caption="text:Trattativa">none</control>
+          <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        </header>
+        <data>
+          <dbname>invendita</dbname>
+          <control format="{0}" caption="dbfieldset:invendita°(1=text:Vendita|0=text:Affitto)">label</control>
+          <bck_color></bck_color>
+          <css_data_cell>scheda_view</css_data_cell>
+        </data>
+      </column>
+      <column>
+        <header>
+          <visible>1</visible>
+          <dbname>started</dbname>
+          <control format="{0}" caption="text:Iniziato">none</control>
+          <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        </header>
+        <data>
+          <dbname>started</dbname>
+          <control format="{0}" caption="dbfield:started">label</control>
+          <bck_color></bck_color>
+          <css_data_cell>scheda_view</css_data_cell>
+        </data>
+      </column>-->
+    </chart>
+    <!--<chart title="privati_mirabile" table="privati_mirabile">
+      <head_info/>
+      <column>
+        <dbname>id_prezzo</dbname>
+        <caption>id_prezzo</caption><trace_col>1</trace_col>
+        <control format="{0}" caption="dbfield:id_prezzo">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>id_prodotto</dbname>
+        <caption>id_prodotto</caption><trace_col>1</trace_col>
+        <control format="{0}"  caption="dbfield:id_prodotto">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+        <column>
+        <dbname>id_check</dbname>
+        <caption>check</caption><trace_col>1</trace_col>
+        <control format="{0}" caption="dbfield:id_check">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>   <column>
+        <dbname>nome_prodotto</dbname>
+        <caption>Publicazione</caption><trace_col></trace_col>
+        <control format="{0}" caption="dbfield:nome_prodotto">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+       <column>
+        <dbname>Prezzo</dbname>
+        <caption>Prezzo</caption><trace_col></trace_col>
+        <control format="&#8364; {0}" caption="dbfield:Prezzo">check</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+         <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      -->
+    <!--
+      <column>
+        <dbname>Prezzo_rinnovo</dbname>
+        <caption>Rinnovo</caption><trace_col>1</trace_col>
+        <control format="&#8364; {0}" caption="dbfield:Prezzo_rinnovo">check</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">prices_header</css_heading_col><css_data_cell>prices</css_data_cell>
+      </column>
+      <column>
+        <dbname>id_prezzo</dbname>
+        <caption>Selezione</caption><trace_col>1</trace_col>
+        <control caption="dbfield:self">check</control>
+        <css_heading_col apply_only_ifowner="1">prices_header</css_heading_col><css_data_cell>prices</css_data_cell>
+      </column>      -->
+    <!--
+    </chart>-->
+    <!--<chart title="ente_galluzzo" table="ente_galluzzo">
+      <head_info/>
+      <column>
+        <dbname>id_prodotto</dbname>
+        <caption>id_prodotto</caption><trace_col>1</trace_col>
+        <control format="{0}" caption="dbfield:id_prodotto">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>     
+      <column>
+        <dbname>id_check</dbname>
+        <caption>check</caption><trace_col>1</trace_col>
+        <control format="{0}"  caption="dbfield:id_check">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>nome_prodotto</dbname>
+        <caption>Rivista</caption><trace_col></trace_col>
+        <control format="{0}" caption="dbfield:nome_prodotto">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>Print + Online</dbname>
+        <caption>Print + Online</caption>
+        <trace_col></trace_col>
+        <control href="#" onClick="javascript:OpenPopupPrntOnline({0});" format="&#8364; {0}" caption="dbfield:Print + Online">link</control>
+        -->
+    <!-- reskey:msg_PrntPlusOnlineWarning-->
+    <!--
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>Solo Online</dbname>
+        <caption>Solo Online</caption><trace_col></trace_col>
+        <control format="&#8364; {0}" caption="dbfield:Solo Online">check</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+    </chart>-->
+    <!--<chart title="ente_mirabile" table="ente_mirabile">
+      <head_info/>
+      <column>
+        <dbname>id_prezzo</dbname>
+        <caption>id_prezzo</caption><trace_col>1</trace_col>
+        <control format="{0}" caption="dbfield:id_prezzo">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>id_prodotto</dbname>
+        <caption>id_prodotto</caption><trace_col>1</trace_col>
+        <control format="{0}"  caption="dbfield:id_prodotto">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>id_check</dbname>
+        <caption>check</caption><trace_col>1</trace_col>
+        <control format="{0}" caption="dbfield:id_check">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>nome_prodotto</dbname>
+        <caption>Repertorio</caption><trace_col></trace_col>
+        <control format="{0}" caption="dbfield:nome_prodotto">label</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+      <column>
+        <dbname>Prezzo</dbname>
+        <caption>Primo abbonamento</caption><trace_col></trace_col>
+        <control format="&#8364; {0}" caption="dbfield:Prezzo">check</control>
+        <bck_color></bck_color>
+        <css_heading_col apply_only_ifowner="1">price_header</css_heading_col>
+        <css_data_cell>scheda_view</css_data_cell>
+      </column>
+    </chart>-->
+  </charts>
+</inchart>

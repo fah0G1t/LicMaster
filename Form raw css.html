@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <style type="text/css">
+        .floater_left {float:left }
+        .divRow
+        {
+           display:table-row ;
+           width:auto;
+        }
+
+        .clear_left { clear :left}
+        
+    </style>
+
+</head>
+<body>
+    <div>
+        <div class="divRow">1.-Richiesta licenza</div>
+        <div class="divRow">
+            <div>
+                <span id="lblReadRequestEvent"></span>
+            </div>
+            <div>
+                <div>
+                    <input type="file" id="uplLicRequest" />
+                </div>
+                <div class="floater_left">
+                    <input type="button" id="cmdUploadAndProcess" value="Carica File richiesta" />
+                </div>
+            </div>
+        </div>
+        <div class="divRow">
+            <!-- first row of fields-->
+            <div class="floater_left">
+                <div>Richiedente</div>
+                <div><input type="text" id="txtRicRagioneSoc" /></div>
+            </div>
+            <div class="floater_left">
+                <div>telefono</div>
+                <div><input type="text" id="txtRicTelefono" /></div>
+            </div>
+            <div class="floater_left">
+                <div>e-mail</div>
+                <div><input type="text" id="txtRic_e_mail" /></div>
+            </div>
+            <div class="floater_left">
+                <div>Data richiesta</div>
+                <div><input type="text" id="txtDateRequest" /></div>
+            </div>
+        </div>
+        <div class="divRow">
+            <!-- second row of fields-->
+            <div class="floater_left">
+                <div>Sistema operativo</div>
+                <div><input type="text" id="txtRic_OSystem" /></div>
+            </div>
+            <div class="floater_left">
+                <div>Computer name</div>
+                <div><input type="text" id="txtRicCompName" /></div>
+            </div>
+            <div class="floater_left">
+                <div>Vol.Serial Number</div>
+                <div><input type="text" id="txtRicVSN" /></div>
+            </div>
+            <div class="floater_left">
+                <div>Folder</div>
+                <div><input type="text" id="txtRicAppFolder" /></div>
+            </div>
+            <div class="floater_left">
+                <div>
+                    <input type="button" id="cmdUploadFromForm" value="Leggi dal form" />
+                </div>
+            </div>
+        </div>  
+    </div><!-- eof main div-->
+        <!--
+    <tr>
+        <td style="width: 79px; height: 48px" colspan="4">
+            <asp:TextBox ID="txtCleanBuffer" runat="server" Height="136px" Rows="8"
+                         TextMode="MultiLine" Width="986px"></asp:TextBox>
+        </td>
+        <td style="height: 48px">
+            &nbsp;
+        </td>
+    </tr>
+    -->
+
+           
+        <!--
+        <tr>
+            <td>
+                <fieldset style="background-color: #CCCCCC; admin_alter_row: ;">
+                    <legend class="text_in_cell"
+                            style="width: 359px">2.-Clienti registrati</legend>
+                    <table style="width: 682px">
+
+                        <tr>
+                            <td colspan="2" style="width: 448px">
+                                <asp:Label ID="lblNewClientEvent" runat="server" Font-Bold="True" Width="610px"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 448px">
+                                <asp:DropDownList ID="cboClients" runat="server" Width="434px" AutoPostBack="True">
+                                </asp:DropDownList>
+                            </td>
+                            <td align="center">
+                                <asp:Button ID="cmdCreateNewFromReq" runat="server" Text="Crea nuovo da richiesta"
+                                            Width="170px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 448px">
+                                <asp:Label ID="lblClientInfo" runat="server" Width="435px"></asp:Label>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </fieldset>
+
+            </td>
+        </tr>
+        -->
+        <!--
+           <tr>
+            <td>
+                <fieldset style="width: 1194px">
+                    <legend class="text_in_cell"
+                            style="width: 534px">
+                        3.-Creazione nuova licenza ed elenco licenze rilasciate
+                    </legend>
+                    <table style="width: 1185px">
+                        <tr>
+                            <td colspan="3" style="width: 211px">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 211px" valign="top">
+                                <table style="width: 698px">
+                                    <tr>
+                                        <td>
+                                            Tipo di licenza
+                                        </td>
+                                        <td>
+                                            <asp:DropDownList ID="cboLicType" runat="server" Width="206px">
+                                            </asp:DropDownList>
+                                        </td>
+                                        <td>
+                                            Prodotto:
+                                        </td>
+                                        <td>
+                                            <asp:DropDownList ID="cboProduct" runat="server" Width="206px" AutoPostBack="True">
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Periodo temporale (in giorni)
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtDCount" runat="server" Width="199px">30</asp:TextBox>
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="width: 213px">
+                                Nota:<br />
+                                <table id="lic_note">
+                                    <tr>
+                                        <td>
+                                            <asp:TextBox ID="txtLicNota" runat="server" Width="495px" BorderStyle="Solid"
+                                                         BorderWidth="1px" Height="96px" TextMode="MultiLine"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 211px">
+                                &nbsp;
+                            </td>
+                            <td style="width: 213px">
+                                <asp:Button ID="cmdCreateLic" runat="server" Text="Crea licenza" Width="170px" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 211px">
+                                <asp:Label ID="lblNewLicEvent" runat="server" Font-Bold="True" Width="610px"></asp:Label>
+                            </td>
+                            <td style="width: 213px"></td>
+                        </tr>
+                        <tr>
+                            <td style="width: 211px">
+                                &nbsp;
+                            </td>
+                            <td style="width: 213px">
+                                &nbsp;
+                            </td>
+                            <td style="width: 200px">
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="width: 211px">
+                                <asp:Label ID="Label1" runat="server" Font-Bold="True" Width="678px">Elenco licenze</asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="width: 211px">
+                                <asp:Label ID="lblSendLicEvent" runat="server" Font-Bold="True" Width="679px"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="width: 211px">
+                                <asp:Table ID="tblClientLic" runat="server" Width="1166px" CellSpacing="3"
+                                           BorderColor="Black" BorderStyle="Solid" BorderWidth="1px">
+                                </asp:Table>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr> 
+        -->
+        
+    
+</body>
+</html>

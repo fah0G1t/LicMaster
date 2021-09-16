@@ -1,0 +1,55 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+L2005
+</name>
+</assembly>
+<members>
+<member name="M:L2005.String_IntTable.Delete(System.Int32,System.String@,System.String)">
+	<summary>
+ Si assume che pIDValue è un valore di m_ChildIDField
+ </summary>
+	<param name="pIDValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:L2005.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:L2005.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:L2005.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:L2005.InCharts.Chart.ProcessIIF(System.String,DataUnits1._1.DataUnit)">
+	<summary>
+	</summary>
+	<param name="pExpression"></param>
+	<param name="drow"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:L2005.InCharts.Chart.BuildCaptionValue(System.Collections.SortedList,DataUnits1._1.DataUnit,System.Int32@)">
+	<summary>
+ ossoletta
+ </summary>
+	<param name="slControlAtts"></param>
+	<param name="drow">Datarow segnalata da DataUnit::CurrentDSetRow</param>
+	<param name="pTokenPos"></param>
+	<returns></returns>
+	<remarks>llevar a w2b</remarks>
+</member><member name="M:L2005.InCharts.Chart.CreateCellContent(XMLAccess.ArrayList4XML,System.Web.UI.WebControls.TableCell@,DataUnits1._1.DataUnit)">
+	<summary>
+	</summary>
+	<param name="pContent"></param>
+	<param name="pCell"></param>
+	<param name="pDataRow">La riga in processo si trova segnalata da DataUnit::CurrentDSetRow </param>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

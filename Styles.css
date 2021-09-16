@@ -1,0 +1,39 @@
+﻿body {
+}
+
+
+.mylogtable_aaaa
+{
+	font-weight: bold;
+	color: #663300;
+	font-size: x-small;
+	background-color: #CCFFFF;
+	font-family: Arial, Verdana;
+}
+
+.admin_base_row
+{
+	font-weight: bold;
+	color: #000000;
+	font-size: small;
+	background-color: #CCFFFF;
+	font-family: Arial, Verdana;
+}
+
+.admin_alter_row
+{
+	font-weight: bold;
+	color: #000000;
+	font-size: small;
+	background-color: #CCCCCC;
+	font-family: Arial, Verdana;
+}
+
+.chart_heading
+{
+	font-weight: bold;
+	color: #000000;
+	font-size: small;
+	background-color: #33CCFF;
+	font-family: Arial, Verdana;
+}

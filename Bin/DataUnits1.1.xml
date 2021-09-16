@@ -1,0 +1,25 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DataUnits1.1
+</name>
+</assembly>
+<members>
+<member name="M:DataUnits1._1.DataUnit.SetConnectionString(System.String,DataUnits1._1.DataUnit.ActionOnConnect,DataUnits1._1.SQLHint)">
+	<summary>
+ Il parametro pHint avrà solo effetto se pAction è loadData
+ </summary>
+	<param name="pConStr"></param>
+	<param name="pAction"></param>
+	<param name="pHint"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:DataUnits1._1.SQLHint.pRegisterStat">
+	<summary>
+ Punterrbbe a una table con struttura stat campo = value
+ </summary>
+	<remarks>Stat future uses</remarks>
+</member>
+</members>
+</doc>

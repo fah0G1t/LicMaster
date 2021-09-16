@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LicMaster", ".", "{9BB4EE7C-44FE-4237-9470-D3486E12652F}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/LicMaster"
+		Debug.AspNetCompiler.PhysicalPath = "\..\progetti\LicMaster\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\LicMaster\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/LicMaster"
+		Release.AspNetCompiler.PhysicalPath = "\..\progetti\LicMaster\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\LicMaster\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1059"
+	EndProjectSection
+	ProjectSection(SvnOrigin) = preProject
+		@Keys = Enlist,Svn.Uri
+		Enlist = Required
+		Svn.Uri = https://svn.ingenio.bz:8443/svn/ingenio-license-master/trunk/
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+		Debug|x86 = Debug|x86
+		x86Test|.NET = x86Test|.NET
+		x86Test|x86 = x86Test|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BB4EE7C-44FE-4237-9470-D3486E12652F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{9BB4EE7C-44FE-4237-9470-D3486E12652F}.Debug|.NET.Build.0 = Debug|Any CPU
+		{9BB4EE7C-44FE-4237-9470-D3486E12652F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9BB4EE7C-44FE-4237-9470-D3486E12652F}.x86Test|.NET.ActiveCfg = Debug|Any CPU
+		{9BB4EE7C-44FE-4237-9470-D3486E12652F}.x86Test|x86.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal
